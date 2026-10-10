@@ -1,0 +1,81 @@
+{
+  "_readme": "Copy this to profile.json and fill it in. Nothing here is uploaded anywhere - it stays on this machine and is only typed into forms you open yourself.",
+
+  "identity": {
+    "first_name": "",
+    "last_name": "",
+    "full_name": "",
+    "email": "",
+    "phone": "",
+    "location": "City, ST",
+    "city": "",
+    "state": "",
+    "postal_code": "",
+    "address": "",
+    "country": "United States"
+  },
+
+  "links": {
+    "linkedin": "",
+    "github": "",
+    "portfolio": "",
+    "twitter": ""
+  },
+
+  "files": {
+    "resume": "resume.pdf",
+    "cover_letter": "",
+
+    "_resume_by_keyword": "Optional. Different resume depending on what the job is. 'match' is a regex tested against '<job title> <company>'; first match wins, and if its file is missing you get told rather than silently sent the default. Delete this list to always use files.resume.",
+    "resume_by_keyword": []
+  },
+
+  "_search": "Defaults for collect_indeed.py, so the common case is just `python collect_indeed.py --resolve`. Overridden by --what / --where / --days.",
+  "search": {
+    "what": "",
+    "where": "Remote",
+    "days": 7
+  },
+
+  "work": {
+    "current_company": "",
+    "current_title": "",
+    "work_authorized": "Yes",
+    "requires_sponsorship": "No",
+    "willing_to_relocate": "Yes",
+    "notice_period": "Immediately",
+    "how_did_you_hear": "Company website",
+    "years_experience": ""
+  },
+
+  "never_autofill": [
+    "gender",
+    "\\brace\\b",
+    "ethnic",
+    "hispanic",
+    "veteran",
+    "disability",
+    "salary",
+    "compensation",
+    "expected pay",
+    "desired pay",
+    "pay expectation",
+    "date of birth",
+    "social security",
+    "\\bssn\\b",
+    "criminal",
+    "felony"
+  ],
+
+  "answers": [
+    {
+      "_comment": "Checked BEFORE the built-in rules, top to bottom. 'match' is a regex tested against the field's label text (case-insensitive).",
+      "match": "why (are|do) you (interested|want)",
+      "value": ""
+    },
+    {
+      "match": "cover letter",
+      "value": ""
+    }
+  ]
+}
