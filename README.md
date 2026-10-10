@@ -336,3 +336,12 @@ Deliberately left behind:
 
 Kept: the keyword→resume idea (now `files.resume_by_keyword`, regex instead of
 three hundred hardcoded keywords) and jittered delays between jobs.
+
+## Tests
+
+```bash
+pip install pytest
+pytest tests
+```
+
+The suite covers the answer-matching rules that decide what goes into each form field, including regressions for mistakes the filler made on real applications: a full name typed into "Name two things..." essay boxes, "man" matching "Cisgender woman", a radio answer containing "no" ticking No, years-of-experience answered for a domain never worked in, and TODO placeholders being typed. Pure functions only; the network is blocked and no browser is started.

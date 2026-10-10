@@ -166,7 +166,10 @@ def build_rules(prof: dict) -> list[tuple[re.Pattern, str]]:
 
     add(r"first\s*name|given name|forename", ident.get("first_name"))
     add(r"last\s*name|surname|family name", ident.get("last_name"))
-    add(r"full name|preferred name|legal name|^name\b|your name", ident.get("full_name"))
+    # "^name" must be the WHOLE label. As a prefix it matched essay prompts like
+    # "Name two things you're proud of" and typed his name into them; unlike a
+    # blank, a wrong answer passes every completeness check.
+    add(r"full name|preferred name|legal name|^name\s*[*✱:]?$|your name", ident.get("full_name"))
     add(r"e-?mail", ident.get("email"))
     add(r"phone|mobile|telephone|cell", ident.get("phone"))
 
