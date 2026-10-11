@@ -1,4 +1,6 @@
-# jobsearch
+# Job Apply Automation
+
+[![CI](https://github.com/lowriskbtc/job-apply-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/lowriskbtc/job-apply-automation/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white) [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Autofills job application forms from a local profile, then stops so you can read
 and submit. Built and tested against live Greenhouse and Lever forms.
